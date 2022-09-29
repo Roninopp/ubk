@@ -25,16 +25,16 @@ class Var:
     API_HASH = (
         sys.argv[2]
         if len(sys.argv) > 2
-        else config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
+        else config("API_HASH", default="78ba6352dd5cdc166fdef5aa84ba7c67")
     )
     SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
-        else (config("REDIS_URI", default=None) or config("REDIS_URL", default=None))
+        else (config("REDIS_URI", default=None) or config("REDIS_URL", default="redis-10625.c99.us-east-1-4.ec2.cloud.redislabs.com:10625"))
     )
     REDIS_PASSWORD = (
-        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
+        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default="dplEdSkGkGs0WCs7J2XdGRSLgQL0HHGT")
     )
     # extras
     BOT_TOKEN = config("BOT_TOKEN", default=None)
