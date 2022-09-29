@@ -20,14 +20,14 @@ except ImportError:
 class Var:
     # mandatory
     API_ID = (
-        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID", default=6, cast=int)
+        int(sys.argv[1]) if len(sys.argv) > 1 else config("API_ID", default=76359, cast=int)
     )
     API_HASH = (
         sys.argv[2]
         if len(sys.argv) > 2
         else config("API_HASH", default="78ba6352dd5cdc166fdef5aa84ba7c67")
     )
-    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
+    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default="1BVtsOJUBu3_kEu_mV76-5FIKSgdBPlFXvTma7Fxyv96szkmXAkG6WT5Yi_P3sXZ11aVSvqFAAQZ5jCa9B-Mlb5uE3dustOUNgzjHRNFcTBxkMGfNZ7iD0kWIX8sTMrOOhD5wnUllCs3bpVxLWxxSiZfvVg66gq_ytKgk7MMw428Q9LN0DksGJPX3I3GZlvsFd1CKOFP-appcToR_nAAahsOtbB7aIu4IhbY8RYTo79k_m041xnGohdVgV9MkozgqGldx6osIIcUAji5t33AWB3o-ac6xDP5eLrTDRk3vCbkWo3F2W2QuO3z7Ex5cSqibgFYt7h1E_oDjgHFRoMqoL2TzsAvNsL8=")
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
